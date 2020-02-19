@@ -1,4 +1,4 @@
-# classify_dogs-vs-cats_using_keras
+# Classifying between Broached and Unbroached Mechanical Equipment with above 96% accuracy
 
 Here, we use Keras, an high level neural network Library for classify Dog vs cat images from kaggle data-set.
 For more description :- https://medium.com/@parthvadhadiya424/hello-world-program-in-keras-with-cnn-dog-vs-cat-classification-efc6f0da3cc5
