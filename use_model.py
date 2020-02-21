@@ -3,12 +3,12 @@ import cv2
 import numpy as np
 
 
-json_file = open('model1.json', 'r')
+json_file = open('model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 loaded_model = model_from_json(loaded_model_json)
 
-loaded_model.load_weights("model1.h5")
+loaded_model.load_weights("model.h5")
 print("Loaded model from disk")
 
 '''loaded_model.compile(loss=keras.losses.categorical_crossentropy,
@@ -17,6 +17,7 @@ print("Loaded model from disk")
 '''
 loaded_model.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
+#Image to be verified on
 img = cv2.imread("./test4.png")
 img = cv2.resize(img, (200,200))
 print(img.shape)
