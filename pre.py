@@ -2,17 +2,17 @@ import os
 from tqdm import tqdm
 import cv2
 
-TRAIN_DIR = './train'
-IMG_SIZE = 50
+TRAIN_DIR = './Broached'
+IMG_SIZE = 200
 
 
 
 def create_train_test_dir():
     counter=1
     for img in tqdm(os.listdir(TRAIN_DIR)):
-    	word_label = img.split('.')[-3]
-    	if word_label == 'cat': lable="cats"
-    	elif word_label == 'dog': lable="dogs"
+    	word_label = img.split('.')[0]
+    	if word_label == '1broached': lable="broached"
+    	elif word_label == '1unbroached': lable="unbroached"
     	path = os.path.join(TRAIN_DIR,img)
     	img = cv2.imread(path,cv2.IMREAD_GRAYSCALE)
     	img = cv2.resize(img, (IMG_SIZE,IMG_SIZE))
